@@ -1,0 +1,18 @@
+POST /api/v2/register HTTP/1.1
+Host: typhoonconctf-2023-quoteoftheday.chals.io
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 44
+Origin: https://typhoonconctf-2023-quoteoftheday.chals.io
+Referer: https://typhoonconctf-2023-quoteoftheday.chals.io/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+Connection: close
+
+{"username":"admin']","password":"blahblah"}
