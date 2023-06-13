@@ -15,6 +15,7 @@ class Auth{
     public $isValidToken;
     public $isAdmin;
 
+    
     function __construct($db){
         $this->conn = $db;
         $headers = null;
@@ -45,6 +46,7 @@ class Auth{
                 "error" => $e->getMessage()
             )));
         }
+
         $query = "SELECT id, role
                 FROM " . $this->table_name . "
                 WHERE uuid = ?

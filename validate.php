@@ -13,13 +13,19 @@ $user = new User($db);
 if (isset($_GET['userid'])) {
 	$userid = (int)$_GET['userid'];
 	$user->getInfo($userid);
-    echo json_encode(array(
-        "message" => "Access granted.",
-        "id" => $user->id,
-        "username" => $user->username,
-        "uuid" => $user->uuid,
-        "role" => $user->role
-    ));
+	if ($auth->id === $userid) {
+        echo json_encode(array(
+            "message" => "Access granted.",
+            "id" => $user->id,
+            "username" => $user->username,
+            "uuid" => $user->uuid,
+            "role" => $user->role
+        ));
+	}else{
+		echo json_encode(array(
+			"message" => "Not authorized to access other users.",
+		));
+	}
 }else{
 	echo json_encode(array(
 		"message" => "Access granted.",
